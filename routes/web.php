@@ -34,11 +34,23 @@ Route::middleware('auth')->group(function () {
         return view('reports');
     })->name('reports');
 
+
+    /*
     Route::get('register-attendance', function () {
-        Gate::authorize('register-attendance');
+        Gate::authorize('registrar-tareas');
 
         return view('register-attendance');
     })->name('register-attendance');
+    */
+
+    Route::get('registrar-tarea', function(){
+        //Gate::authorize('crear-tarea');
+
+        return view('register-attendance');
+    })->name('registrar-tarea');
+    
+
+
 });
 
 require __DIR__.'/auth.php';

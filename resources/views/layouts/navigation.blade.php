@@ -20,9 +20,9 @@
                             {{ __('Reportes') }}
                         </x-nav-link>
                     @endcan
-                    @can('register-attendance')
-                        <x-nav-link :href="route('register-attendance')" :active="request()->routeIs('register-attendance')">
-                            {{ __('Registrar Asistencia') }}
+                    @can('crear-tarea')
+                        <x-nav-link :href="route('registrar-tarea')" :active="request()->routeIs('registrar-tarea')">
+                            {{ __('Crear tarea') }}
                         </x-nav-link>
                     @endcan
                 </div>
@@ -55,7 +55,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Logout') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -80,16 +80,20 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+
             @can('see-reports')
                 <x-responsive-nav-link :href="route('reports')" :active="request()->routeIs('reports')">
                     {{ __('Reportes') }}
                 </x-responsive-nav-link>
             @endcan
-            @can('register-attendance')
-                <x-responsive-nav-link :href="route('register-attendance')" :active="request()->routeIs('register-attendance')">
-                    {{ __('Registrar Asistencia') }}
+
+            @can('crear-tarea')
+                <x-responsive-nav-link :href="route('registrar-tarea')" :active="request()->routeIs('registrar-tarea')">
+                    {{ __('Crear tarea') }}
                 </x-responsive-nav-link>
             @endcan
+
+
         </div>
 
         <!-- Responsive Settings Options -->
@@ -111,7 +115,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                        {{ __('Logout') }}
                     </x-responsive-nav-link>
                 </form>
             </div>

@@ -26,8 +26,10 @@ class AuthServiceProvider extends ServiceProvider
             $user->role == User::ROLE_ADMINISTRATOR
         );
 
-        Gate::define('register-attendance', fn (User $user) =>
-            $user->role == User::ROLE_TEACHER
+
+        //ROL SUPERVISOR REGISTRO TAREAS
+        Gate::define('crear-tarea', fn (User $user) =>
+            $user->role == User::ROLE_SUPERVISOR
         );
     }
 }

@@ -44,17 +44,17 @@ class UserFactory extends Factory
         ]);
     }
 
-    public function teacher(): static
+    public function supervisor(): static
     {
         return $this->state(fn (array $attributes) => [
-            'role' =>  User::ROLE_TEACHER
+            'role' =>  User::ROLE_SUPERVISOR
         ]);
     }
 
-    public function student(): static
+    public function equipo(): static
     {
         return $this->state(fn (array $attributes) => [
-            'role' =>  User::ROLE_STUDENT
+            'role' =>  User::ROLE_CUADRILLA
         ]);
     }
 }

@@ -15,23 +15,23 @@ class DatabaseSeeder extends Seeder
     {
         User::factory()
             ->state([
-                'email' => 'administrador@laraveleando.com'
+                'email' => 'cristianandrescv@gmail.com'
             ])
             ->administrator()
             ->create();
 
         User::factory()
             ->state([
-                'email' => 'profesor@laraveleando.com'
+                'email' => 'supervisor@email.com'
             ])
-            ->teacher()
+            ->supervisor()
             ->create();
 
         User::factory()
             ->state([
-                'email' => 'estudiante@laraveleando.com'
+                'email' => 'cuadrilla1@email.com'
             ])
-            ->student()
+            ->equipo()
             ->create();
     }
 }
