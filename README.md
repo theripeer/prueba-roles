@@ -52,7 +52,7 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 
-- Finalmente instalamos dependencias Javascript y levantamos nuestra aplicación
+- Finalmente instalamos dependencias Javascript y levantamos nuestra aplicación ..
 
 ```
 yarn && yarn dev
